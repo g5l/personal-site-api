@@ -2,11 +2,11 @@
   "development": {
     "username": "root",
     "password": null,
-    "database": "g5l_dashboard_development",
+    "database": "g5l_personal_site_development",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "define": {
-      "paranoid":false,
+      "paranoid": false,
       "timestamps": true,
       "freezeTableName": false,
       "underscored": true
@@ -15,14 +15,14 @@
   "test": {
     "username": "root",
     "password": null,
-    "database": "database_test",
+    "database": "g5l_personal_site_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "root",
     "password": null,
-    "database": "database_production",
+    "database": "g5l_personal_site_production",
     "host": "127.0.0.1",
     "dialect": "mysql"
   }

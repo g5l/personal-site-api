@@ -3,14 +3,13 @@ const express = require('express');
 const fileUpload = require('express-fileupload');
 const bodyParser = require("body-parser");
 const cors = require('cors');
-const morgan = require('morgan');
 const passport = require('passport');
 const passportJWT = require('passport-jwt');
 const db = require("./models");
+require('dotenv').config();
 
 const apiUser = require("./api/user");
-const apiProduct = require("./api/product");
-const apiNotice = require("./api/notice");
+const apiBlog = require("./api/blog");
 
 let ExtractJwt = passportJWT.ExtractJwt;
 let JwtStrategy = passportJWT.Strategy;
@@ -51,11 +50,10 @@ app.use((req, res, next) => {
   next();
 });
 
-apiProduct(app, db);
 apiUser(app, db);
-apiNotice(app, db);
+apiBlog(app, db);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3030;
 app.listen(port);
 
 console.log('API server started on: ' + port);
