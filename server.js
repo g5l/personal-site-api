@@ -53,7 +53,10 @@ app.use((req, res, next) => {
 apiUser(app, db);
 apiBlog(app, db);
 
-const port = process.env.PORT || 3030;
-app.listen(port);
+app.get('/', (req, res) => res.send('Hello World! ' + new Date().toString()))
 
-console.log('API server started on: ' + port);
+const PORT = process.env.PORT || 3030;
+const HOST = '127.0.0.1';
+app.listen(PORT, HOST);
+
+console.log(`API server started on http://${HOST}:${PORT}`);
