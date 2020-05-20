@@ -1,11 +1,8 @@
 FROM node:12-alpine
 
-WORKDIR /usr/app
-COPY package.json yarn.lock ./
+COPY . .
 
 RUN yarn
-
-COPY . .
 
 EXPOSE 3030
 

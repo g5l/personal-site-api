@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'g5l_personal_site_development'
+      MYSQL_USER: 'root'
+      MYSQL_PASSWORD: null
+      MYSQL_ROOT_PASSWORD: null
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
